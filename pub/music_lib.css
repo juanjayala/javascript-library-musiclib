@@ -1,0 +1,256 @@
+html {
+    overflow-y: scroll;
+  }
+  
+body {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: large;
+}
+
+h1 {
+    text-align:center;
+}
+
+.lib-title{
+    font-size: 350%;
+    margin: 5px;
+}
+
+.lib-sub{
+    font-size: 150%;
+    text-align: center;
+}
+
+.lib-sub-sub{
+    text-align: center;
+}
+
+.infoBox {
+    display: none;
+    position: absolute;
+    color: black;
+
+    background: white;
+
+    width: 500px;
+    min-height: 100px;
+
+    border: 1px solid black
+}
+
+.artistImgContainer {
+    margin: 10px;
+    float: left;
+}
+
+.artistImg {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.artistInfo {
+    margin: 5px;
+    float: left;
+}
+
+.popUp:hover .infoBox {
+    /* position: relative;  it is relative but moves text around it */
+    display: block;
+    text-align: center;
+}
+
+
+.albumInfoBox {
+    display: none;
+    position: absolute;
+    color: black;
+
+    background: white;
+
+    min-width: 250px;
+    min-height: 100px;
+
+    text-align: left;
+    padding: 5px;
+
+    border: 1px solid black
+}
+
+.popUp:hover .albumInfoBox {
+    display: block;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 8px;
+    z-index:10;
+}
+
+.popUp:active .albumInfoBox {
+    display: none;
+    /* text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 8px; */
+}
+
+/* For drag and drop features I used these videos as reference: */
+/* Traversy Media. (2018, May 22). Drag & Drop With Vanilla JS [Video]. YouTube. 
+        https://www.youtube.com/watch?v=C22hQKE_32c */
+/* Tyler Potts. (2019, July 29). Easy Drag n Drop with JavaScript - 
+        how to code tutorial [Video]. YouTube. https://www.youtube.com/watch?v=tZ45HZAkbLc*/
+/* Web Dev Simplified. (2020, March 17). How To Build Sortable Drag & Drop With Vanilla 
+        Javascript [Video]. YouTube. https://www.youtube.com/watch?v=jfYWwQrtzzY */
+
+
+.dragContainer {
+    margin: auto;
+    min-height: 200px;
+    max-width: 1500px;
+    background-color: white;
+    text-align:center;
+}
+
+.dragContainerTitle {
+    /* font-family: georgia; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+}
+
+.dragImg {
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    border: 3px black solid;
+    /* background-image: url('http://source.unsplash.com/random/175x175'); */
+    cursor: pointer;
+
+    /* background-image: url('http://source.unsplash.com/random/150x150');
+    position: relative;
+    height: 150px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer; */
+}
+
+.dragImg.dragging {
+    opacity: .5;
+}
+
+
+/*--------------- Playlist ---------------*/
+.number-header{
+    text-align: center;
+}
+
+.playlist-table{
+    border-collapse: collapse;
+    /* border: 1px solid #000000; */
+    min-width:1250px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, .15);
+    margin: 25px auto;
+
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px gray; */
+}
+
+.playlist-table thead img{
+    width: 225px;
+    height: 225px;
+    float: left;
+    /* border: 1px solid black; */
+    /* text-align: left; */
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.playlist-table .playlist-title{
+    top: 60px;
+    vertical-align: middle;
+    font-size: 400%;
+    position: relative;
+    font-weight: 200;
+    left: 30px;
+    /* font-family: georgia; */
+}
+
+.playlist-table thead tr {
+    /* border: 1px solid #000000; */
+    /* float: left; */
+    border-bottom: 1.5px solid black;
+    text-align: left;
+    /* vertical-align: middle; */
+}
+
+.playlist-table thead tr td{
+    font-size: 125%;
+    letter-spacing: 0.75px;
+    vertical-align: middle;
+}
+
+.playlist-table .header {
+    padding: 8px;
+    font-size: 115%;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid black;
+}
+
+.playlist-table tbody {
+    padding: 8px;
+}
+
+
+.playlist-table tbody tr {
+    height: 50px;
+}
+
+.playlist-table .song-name{
+    /* top: 35px; */
+    float: left;
+    vertical-align: middle;
+    /* font-size: 275%; */
+    position: relative;
+    top: 25px;
+    left: 15px;
+    /* font-family: georgia; */
+}
+
+.playlist-table tbody tr img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    /* border: 1px solid black; */
+    /* text-align: left; */
+    /* margin-left: 60px; */
+}
+
+.play-button{
+    cursor: pointer;
+    text-align: center;
+    width: 65px;
+    /* background-color: blue; */
+}
+
+.play-button .fas{
+    display: none;
+}
+
+
+/* Album Popup */
+.staff-picks{
+    margin: auto;
+    text-align: center;
+    max-width: 850px;
+}
+
+
+.staff-picks-img{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MusicLib</title>
+
+    <link rel="stylesheet" type="text/css" href="music_lib.css" />
+
+    <!-- load jquery -->
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"      
+    ></script>
+
+    <!-- load our library code -->
+    <script defer type="text/javascript" src="music_lib.js"></script>
+
+    <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <!-- play button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <!-- load example js that used our library code -->
+    <script defer type="text/javascript" src="examples.js"></script>
+    </head>
+
+    <body>
+        <h1 class="lib-title">MusicLib</h1>
+        <h2 class="lib-sub">Create interactive music-related features</h2>
+        <h3 class="lib-sub-sub"> <a href="documentation.html">Link to documentation</a></h3>
+        <br>
+        <h3 class="lib-sub-sub">-----Example Webpage-----</h3>
+
+        <h1>Music Blog</h1>
+        <h2>2022 In Music So Far</h2>
+        <h3 >[Hover over bold words]</h3>
+        Multiple artists have released long awaited albums such as 
+        <span id="mitskiPopUp"><b>Mitski's</b></span> 'Laurel Hell', 
+        <span id="fkatwigsPopUp"><b>FKA twigs'</b></span> 'Caprisongs', 
+        and <span id="theweekndPopUp"><b>The Weeknd's</b></span> 'Dawn FM'.
+        <br>
+        <br>
+        <h2>Staff Picks</h2>
+        <h3 >[Hover over albums]</h3>
+        For March, our staff picks include:
+        <div class="staff-picks">
+            <span id="dirty-computer"></span>
+            <span id ="future-nostalgia"></span>
+            <span id="born-to-die"></span>
+            <span id ="silk-sonic"></span>
+        </div>
+        
+        <h2>Looking Back At 2021</h2>
+        <h3 >[Hover over albums + Drag albums around]</h3>
+        <div id ="draggingBox"></div>
+
+        <br>
+
+        <h2>Current Hits Playlist</h2>
+        <h3 >[Hover over the numbers on left side to see play button]</h3>
+        <div id="currentHitsPlaylist"></div>
+
+        <!-- <span class="popUp">
+            <img src="images/clai_sling.jpg">
+            <div class="albumInfoBox">
+
+            </div>
+        </span> -->
+        <!-- <h2>Playlist</h2>
+        <div>
+            <table class="playlist-table" style="background-color: #3F77C2;">
+                <thead>
+                    <tr>
+                        <td colspan="5">
+                            <img src="images/current_hits_img.jpg"> 
+                            <span class="playlist-title">Current Hits</span>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="header">
+                        <td class="number-header">#</td>
+                        <td>Name</td>
+                        <td>Album</td>
+                        <td>Artist</td>
+                        <td>Length</td>
+                    </tr>
+
+                    <tr>
+                        <td class="play-button">
+                            <span class="num">1</span>
+                            <i class="fas fa-play"></i>
+                        </td>
+                        <td>
+                            <img src="images/clai_sling.jpg">
+                            <span class="song-name">Kicks</span>
+                        </td>
+                        <td>LP1</td>
+                        <td>FKA twigs</td>
+                        <td>5:25</td>
+                    </tr>
+                </tbody>
+            </table> -->
+              <!-- <div class="play-container">
+                <i class="fas fa-play"></i>
+            </div>  -->
+        <!-- </div> -->
+    </body>
+</html>

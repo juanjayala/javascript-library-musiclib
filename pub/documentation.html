@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>MusicLib Documentation</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style>
+    </head>
+
+    <body style="font-size: 150%; font-family: 'Roboto', sans-serif; margin-left: 15px;">
+        <div>
+            <h1 style="text-align: center; color: #FF1D58;">
+                MusicLib Documentation
+            </h1>
+            <h2 style="color: #00DDFF; margin-bottom: 10px;">Getting Started!</h2>
+            You will need to add the following link/scripts/styles:
+            <ul style="margin-top: 2px;">
+                <li>link: rel="stylesheet" type="text/css" href="music_lib.css"</li>
+                <li>script: defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"</li>
+                <li>style: @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')</li>
+                <li>link: rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+                    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+                    crossorigin="anonymous" 
+                    referrerpolicy="no-referrer"</li>
+                <li>script: defer type="text/javascript" src="music_lib.js"</li>
+            </ul>
+            <h3 style="color: #F75990; margin-bottom: 2px;">Initialize The Library:</h3>
+            <code style="color: #0049B7;">const mlib = new MusicLib()</code>
+            
+            <h3 style="color: #F75990; margin-bottom: 2px;">Library Usage Example:</h3>
+            <code style="color: #0049B7;">const albumObj = mlib.createAlbum(...)</code>
+            <br>
+            <code style="color: #0049B7;">mlib.albumPopUp("selector-name", albumObj, ["class"])</code>
+
+            <h2 style="color: #00DDFF; margin-bottom: 10px;">Documentation</h2>
+            <h3 style="color: #F75990; margin-top: 2px; margin-bottom: 2px;">MusicLib Objects</h3>
+            <h4 style="color: #0049B7; margin-top: 10px; margin-bottom: 2px;">Album object:</h4>
+            Attributes:
+            <ul style="margin-top: 2px;">
+                <li>name: album name</li>
+                <li>artist: artist name</li>
+                <li>genre: album genre</li>
+                <li>year: album release year</li>
+                <li>tracklist: array of the songs in the album (in order)</li>
+                <li>image_path: path to the image of the album</li>
+            </ul>
+            <h4 style="color: #0049B7; margin-top: 10px; margin-bottom: 2px;">Song object:</h4>
+            <ul style="margin-top: 2px;">
+                <li>name: song name</li>
+                <li>album: <span style="color: #0049B7;">Album object</span></li>
+                <li>length: song length</li>
+            </ul>
+
+            <h3 style="color: #F75990; margin-top: 2px; margin-bottom: 2px;">
+                Methods - Create Objects
+            </h3>
+            <h4 style="color: #0049B7; margin-top: 10px; margin-bottom: 2px;">
+                createAlbum:
+            </h4>
+            Description: Create an <span style="color: #0049B7;">Album object</span> and return it.
+            <br>
+            Parameters:
+            <ul style="margin-top: 2px; margin-bottom: 8px;">
+                <li>name: album name</li>
+                <li>artist: artist name</li>
+                <li>genre: album genre</li>
+                <li>year: album release year</li>
+                <li>tracklist: array of the songs (strings) in the album (in order)</li>
+                <li>image_path: path to the image of the album</li>
+            </ul>
+            Return: <span style="color: #0049B7;">Album object</span>
+
+            <h4 style="color: #0049B7; margin-bottom: 2px;">
+                createSong:
+            </h4>
+            Description: Create a <span style="color: #0049B7;">Song object</span> and return it.
+            <br>
+            Parameters:
+            <ul style="margin-top: 2px; margin-bottom: 8px;">
+                <li>name: song name</li>
+                <li>album: <span style="color: #0049B7;">Album object</span></li>
+                <li>length: song length</li>
+            </ul>
+            Return: <span style="color: #0049B7;">Song object</span>
+
+            <h3 style="color: #F75990; margin-bottom: 2px;">
+                Methods - MusicLib
+            </h3>
+            <h4 style="color: #0049B7; margin-top: 10px; margin-bottom: 2px;">
+                makeInfoBox:
+            </h4>
+            Description: 
+            <br>
+            Add an artist info box with an image <i>image_path</i> and bio <i>bio</i> of the artist 
+            that pops up when hovering over a chosen element <i>selector</i>.
+            <br>
+            Usage:
+            <br>
+            Pass in an object with the attributes:
+            <ul style="margin-top: 2px; margin-bottom: 8px;">
+                <li>selector: the id of where in the web page the info box should show up when you hover over it</li>
+                <li>image_path: path to the image that will show up in the pop up</li>
+                <li>bio: the text to be added to pop up box</li>
+            </ul>
+
+            <h4 style="color: #0049B7; margin-bottom: 2px;">
+                insertDraggingBox:
+            </h4>
+            Description: 
+            <br>
+            Add dragging box, at <i>selector</i>, where albums <i>albums</i> can be dragged
+            and dropped with the title <i>title</i> and background colour <i>backgroundColor</i>.
+            <br>
+            Usage:
+            <br>
+            Pass in these arguments:
+            <ul style="margin-top: 2px; margin-bottom: 8px;">
+                <li>selector: the id of where in the webpage the dragging box will be inserted</li>
+                <li>title: the title of the box</li>
+                <li>albums: list of <span style="color: #0049B7;">Album objects</span></li>
+                <li>backgroundColor: background colour of dragging box</li>
+            </ul>
+
+            <h4 style="color: #0049B7; margin-bottom: 2px;">
+                insertPlaylist:
+            </h4>
+            Description: 
+            <br>
+            Add playlist interface with title <i>title</i>, an image <i>playlist_img</i>, 
+            list of songs <i>songs</i>, and background colour <i>backgroundColor</i>.
+            <br>
+            Usage:
+            <br>
+            Pass in these arguments:
+            <ul style="margin-top: 2px; margin-bottom: 8px;">
+                <li>selector: the id of where in the webpage the dragging box will be inserted</li>
+                <li>title: playlist title</li>
+                <li>playlist_img: the image of the playlist</li>
+                <li>list of <span style="color: #0049B7;">Song objects</span> that are in the playlist</li>
+                <li>backgroundColor: background colour of dragging box</li>
+            </ul>
+
+            <h4 style="color: #0049B7; margin-bottom: 2px;">
+                albumPopUp:
+            </h4>
+            Description:
+            <br>
+            Add an album that when hovered over will show a pop up box with its 
+            name, artist, genre, year, and tracklist
+            <br>
+            Usage:
+            <br>
+            Pass in these arguments:
+            <ul style="margin-top: 2px; margin-bottom: 8px;">
+                <li>selector: the id of where in the webpage the dragging box will be inserted</li>
+                <li>album: Album object</li>
+                <li>img-classes: list of classes to be added to the album image (so users can decide the size/style of the image)</li>
+            </ul>
+        </div>
+    </body>
+</html>
