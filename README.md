@@ -3,6 +3,30 @@ MusicLib - Create interactive music-related features.
 
 The purpose of my library is to display different interactive DOM objects regarding musicians and music. The library can be used by developers in web apps such as apps where users rate songs and albums, music-centered apps that talk about musicians in articles, and the musician section in apps to buy concert tickets. The library has wide variety of uses for different music related topics and can provide a visually appealing addition to websites.
 
+## Webpage Example - Music Blog
+I created a music blog webpage using the MusicLib library. It features all the methods (see more in the Documentation section) I implemented in the library:
+
+### - makeInfoxBox
+When hovering over the artists' names, an info box pops up with a mini bio of the artist. 
+![image](https://user-images.githubusercontent.com/60584205/209578097-1f0421fd-79cc-43ba-bcda-7f8bef1c15cc.png)
+
+### - albumPopUp
+When hovering over the album images, a pop up box shows up with all the album information.
+![image](https://user-images.githubusercontent.com/60584205/209578862-a2a51fe5-9c3a-47d3-b3fa-2037b17ba2da.png)
+
+### - insertDraggingBox
+Images inside this box can be dragged around. In the music blog, this was used to rank the different albums (which each have an albumPopUp added).
+
+https://user-images.githubusercontent.com/60584205/209580248-e744273a-28c0-4be2-b2d8-2ce2282bad8e.mov
+
+### - insertPlaylist
+A playlist is simply made up of a list of _**Song objects**_ (see more in the Documentation section). 
+
+![image](https://user-images.githubusercontent.com/60584205/209580841-8c4145ac-cae3-4b6c-b516-6bf240558ff5.png)
+
+
+
+
 ## Getting Started:
 You will need to add the following link/scripts/styles:  
 link: rel="stylesheet" type="text/css" href="music_lib.css"  
