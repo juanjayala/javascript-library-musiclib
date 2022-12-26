@@ -6,6 +6,9 @@ https://mysterious-wave-56080.herokuapp.com/
 ---Documentation:---
 https://mysterious-wave-56080.herokuapp.com/documentation.html
 
+![image](https://user-images.githubusercontent.com/60584205/209575520-44ca1ca5-3ce5-4683-a237-3eb0bd0736f9.png)
+
+
 ---Getting Started:---  
 You will need to add the following link/scripts/styles:  
 link: rel="stylesheet" type="text/css" href="music_lib.css"  
