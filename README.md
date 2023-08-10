@@ -1,5 +1,5 @@
 # JavaScript Library - MusicLib
-MusicLib - Create interactive music-related features.
+MusicLib - Create interactive music-related features. (Deployed at: https://javascript-library-musiclib.vercel.app/)
 
 The purpose of my library is to display different interactive DOM objects regarding musicians and music. The library can be used by developers in web apps such as apps where users rate songs and albums, music-centered apps that talk about musicians in articles, and the musician section in apps to buy concert tickets. The library has wide variety of uses for different music related topics and can provide a visually appealing addition to websites.
 
